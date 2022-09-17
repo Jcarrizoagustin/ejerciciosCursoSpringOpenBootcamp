@@ -1,18 +1,26 @@
 package ejerciciosSpringOpenBootcamp.ejercicioSession4.entities;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
+@ApiModel("Clase Laptop, representa una Notebook")
 public class Laptop {
   
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
+  @ApiModelProperty("Representa el id, tipo Long")
   private Long id;
+  @ApiModelProperty("Representa el modelos de la notebook")
   private String model;
+  @ApiModelProperty("Representa la marca de la notebook")
   private String brand;
+  @ApiModelProperty("Representa la cantidad de memoria ram que tiene incorporada")
   private Integer ramMemory;
   
   public Laptop(){

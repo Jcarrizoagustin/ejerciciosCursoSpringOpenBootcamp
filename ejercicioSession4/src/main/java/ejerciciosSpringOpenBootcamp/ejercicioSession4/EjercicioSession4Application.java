@@ -23,8 +23,6 @@ public class EjercicioSession4Application {
 		repository.save(laptop2);
 		repository.save(laptop3);
 
-		
-
 	}
 
 	

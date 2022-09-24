@@ -23,8 +23,9 @@ public class LaptopController {
   //Obtener todas las laptops
   @GetMapping("/api/laptops")
   @ApiOperation("Obtener todas las laptops")
-  public List<Laptop> findLaptops(){
-    return repository.findAll();
+  public ResponseEntity<List<Laptop>> findLaptops(){
+    List<Laptop> laptops= repository.findAll();
+    return ResponseEntity.ok(laptops);
   }
 
 
